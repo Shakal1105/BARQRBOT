@@ -80,7 +80,7 @@ class Bot():
                             if self.help ==1:
                                 self.bot.send_message(m.chat.id, "добавлено для просмотра `/update`")
                                 self.help=0
-                    except ZeroDivisionError:
+                    except Exception:
                         self.bot.delete_message(m.chat.id, mid)
                         self.bot.send_message(m.chat.id, "Некоректный ввод цены используйте цифры")
                         self.checker=3
