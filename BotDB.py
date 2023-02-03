@@ -32,7 +32,7 @@ class Bot():
                     self.admins.append(int(m.text[3:]))
                     self.bot.send_message(m.chat.id,'користувач {} отримав права администратора'.format(m.text[3:]))
                 elif m.text[:3] == "del":
-                    self.admins.remove(int(m.texr[3:]))
+                    self.admins.remove(int(m.text[3:]))
                     self.bot.send_message(m.chat.id,"користувач {} лишился прав администратора".format(m.text[3:]))
                 mid=m.id
                 text = m.text
